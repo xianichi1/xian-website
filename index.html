@@ -1,21 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Understanding Cats - Start - About</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Understand Your Cat</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
-<!-- The body section is the protein. -->
 <body>
-    <h1>Understanding Cats 101</h1>
-    <h2>Hello Start Here</h2>
-    <h3>Why do Cats do xyz?</h3>
-        <p>Hello world, this is the website of Xian Yecla simply about Cats, deeper understanding of cats, why they behave in a certain way, patterns</p>
-    <div><a href="about.html">About</a></div>
-    <img src="images/graycat.jpg">
 
-    </body>
+  <header>
+    <h1><a href="index.html">How to Understand Your Cat</a></h1>
+    <nav>
+      <div class="dropdown">
+        <input type="radio" id="why-toggle" name="nav-toggle" />
+        <label for="why-toggle" class="dropdown-label">
+          WHY DO CATS? <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="#">Kneading, Zoomies, Purring, Chasing</a>
+          <a href="#">Why Cats Ignore You</a>
+          <a href="#">Sleeping Habits & Territory</a>
+          <a href="#">Cat Communication (Body Language, Sounds)</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <input type="radio" id="bond-toggle" name="nav-toggle" />
+        <label for="bond-toggle" class="dropdown-label">
+          HOW TO BOND WITH YOUR CATS <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="#">Signs your cat trusts you</a>
+          <a href="#">Playing & Socializing with Cats</a>
+          <a href="#">Do Cats Recognize Their Owners?</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <input type="radio" id="issues-toggle" name="nav-toggle" />
+        <label for="issues-toggle" class="dropdown-label">
+          CAT ISSUES/SOLUTIONS <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="#">Scratching</a>
+          <a href="#">Litter Box Trouble</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="content">
+    <div class="left-text">
+      <h2>Welcome to My Page!</h2>
+      <p>If you’ve ever been curious about what your cat is trying to tell you, or if you just want to understand feline behavior better, you’re about to find out!</p>
+      <p>From playful pounces to slow blinks of affection, every action has meaning. Whether your cat is rubbing against your leg, flicking its tail, or suddenly sprinting across the room, there’s usually a reason behind it.</p>
+      <p>By learning to recognize these behaviors, you’ll be able to respond to their needs and emotions more effectively, making your cat feel more comfortable and understood.</p>
+      <button><a class="button" href="about.html">About Me</a></button>
+    </div>
+
+    <div class="right-image">
+      <img src="images/graycat.jpg" alt="Cute cat looking curious" />
+    </div>
+  </section>
+
+  <section class="bottom-section">
+    <img class="bottom-image" src="images/cat12.jpg" alt="Close-up of cat eyes" />
+    <div>
+      <button class="resource-button">Resources</button>
+    </div>
+  </section>
+
+  
+  <script>
+    const bottomImg = document.querySelector('.bottom-image');
+
+    function animateOnScroll() {
+      const imgTop = bottomImg.getBoundingClientRect().top;
+      const imgBottom = bottomImg.getBoundingClientRect().bottom;
+      const windowHeight = window.innerHeight;
+
+      if (imgTop < windowHeight && imgBottom > 0) {
+        bottomImg.classList.add('animate');
+      } else {
+        bottomImg.classList.remove('animate');
+      }
+    }
+
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('resize', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+  </script>
+
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
