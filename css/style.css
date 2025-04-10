@@ -5,7 +5,7 @@ body {
   margin: 0;
   background-color: #f9f9f9;
   color: #333;
-  cursor: url("images/catpaw-cursor.png"), auto;
+  cursor: url("images/caticon.png"), auto;
 }
 
 header {
@@ -209,18 +209,65 @@ nav .caret {
     vertical-align: middle;
   }
   
-/* Adjust page title for content pages like Kneading */
-.page-title {
-  font-family: 'Darumadrop One', cursive;
-  font-size: 2em;
-  font-weight: normal;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
+  header {
+    background-color: #dff3f7;
+    padding: 20px 0 10px; 
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .page-title {
+    font-family: 'Darumadrop One', cursive;
+    font-size: 2.6em; 
+    font-weight: normal;
+    margin: 0 0 10px; 
+  }
+  
+  .hero-image {
+    width: 80%;
+    border-radius: 10px;
+    margin: 30px auto;
+    display: block;
+  }
+  
+  .page-title {
+    font-family: 'Darumadrop One', cursive;
+    font-size: 2em;
+  }
 
-
-
-
+  .cat-container {
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .ignoring-cat {
+    width: 140px;
+    transition: transform 0.4s ease-in-out;
+    animation: fake-random 6s infinite alternate;
+  }
+  
+  @keyframes fake-random {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-20px); }
+    40% { transform: translateY(15px); }
+    60% { transform: translateX(25px); }
+    80% { transform: translateY(-10px); }
+    100% { transform: translateX(-30px); }
+  }
+  
+  .ignoring-cat:hover {
+    animation: hop-away 0.5s forwards;
+  }
+  
+  @keyframes hop-away {
+    0% { transform: translate(0, 0); }
+    30% { transform: translate(-20px, 10px); }
+    60% { transform: translate(30px, -10px); }
+    100% { transform: translate(-25px, 20px); }
+  }
+  
+  
 
   
   
