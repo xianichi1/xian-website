@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>How to Understand Your Cat</title>
-
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -14,42 +14,39 @@
     <h1><a href="index.html">How to Understand Your Cat</a></h1>
     <nav>
       <div class="dropdown">
-        <input type="radio" id="why-toggle" name="nav-toggle" />
+        <input type="checkbox" id="why-toggle" />
         <label for="why-toggle" class="dropdown-label">
           WHY DO CATS? <span class="caret">˅</span>
         </label>
         <div class="dropdown-content">
-
-            <a href="kneading.html">Kneading, Zoomies, Purring, Chasing</a>
-
+          <a href="kneading.html">Kneading, Zoomies, Purring, Chasing</a>
           <a href="whycatsignoreyou.html">Why Cats Ignore You</a>
-
-          <a href="#">Sleeping Habits & Territory</a>
-          <a href="#">Cat Communication (Body Language, Sounds)</a>
+          <a href="Sleeping.html">Sleeping Habits & Territory</a>
+          <a href="catcomms.html">Cat Communication (Body Language, Sounds)</a>
         </div>
       </div>
 
       <div class="dropdown">
-        <input type="radio" id="bond-toggle" name="nav-toggle" />
+        <input type="checkbox" id="bond-toggle" />
         <label for="bond-toggle" class="dropdown-label">
           HOW TO BOND WITH YOUR CATS <span class="caret">˅</span>
         </label>
         <div class="dropdown-content">
-          <a href="#">Signs Your Cat Trusts You</a>
-          <a href="#">Playing & Socializing with Cats</a>
-          <a href="#">Do Cats Recognize Their Owners?</a>
+          <a href="trust.html">Signs Your Cat Trusts You</a>
+          <a href="playing.html">Playing & Socializing with Cats</a>
+          <a href="recognize.html">Do Cats Recognize Their Owners?</a>
         </div>
       </div>
 
       <div class="dropdown">
-        <input type="radio" id="issues-toggle" name="nav-toggle" />
+        <input type="checkbox" id="issues-toggle" />
         <label for="issues-toggle" class="dropdown-label">
           CAT ISSUES/SOLUTIONS <span class="caret">˅</span>
         </label>
         <div class="dropdown-content">
-            <a href="#">Why is My Cat Meowing So Much?</a>
-            <a href="#">How to Stop Scratching & Biting</a>
-            <a href="#">Litter Box Problems & Solution</a>
+          <a href="meow.html">Why is My Cat Meowing So Much?</a>
+          <a href="scratching.html">How to Stop Scratching & Biting</a>
+          <a href="litter.html">Litter Box Problems & Solution</a>
         </div>
       </div>
     </nav>
@@ -61,31 +58,39 @@
       <p>If you’ve ever been curious about what your cat is trying to tell you, or if you just want to understand feline behavior better, you’re about to find out!</p>
       <p>From playful pounces to slow blinks of affection, every action has meaning. Whether your cat is rubbing against your leg, flicking its tail, or suddenly sprinting across the room, there’s usually a reason behind it.</p>
       <p>By learning to recognize these behaviors, you’ll be able to respond to their needs and emotions more effectively, making your cat feel more comfortable and understood.</p>
-      <button><a class="button" href="about.html">About Me</a></button>
+      <a href="about.html" class="button" style="display: inline-block; padding: 10px 20px; background-color: #c6e3e3; color: black; font-weight: 600; border-radius: 6px; text-decoration: none; font-family: 'Lexend', sans-serif;">About Me</a>
+
     </div>
 
     <div class="right-image">  
-    
       <img src="images/graycat.jpg" alt="Cute cat looking curious" />
     </div>
-  </section>
+    <section class="bottom-section" style="display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; padding: 60px 20px;">
 
-  <section class="bottom-section">
-    <img class="bottom-image" src="images/cat12.jpg" alt="Close-up of cat eyes" />
-    <div>
-      <button class="resource-button">Resources</button>
-    </div>
-  </section>
+        <!-- Left: Cat Image -->
+        <div class="bottom-image-wrapper" style="flex: 1; min-width: 280px;">
+          <img src="images/cat12.jpg" alt="Gray cat sitting on floor" style="width: 100%; border-radius: 10px; max-width: 400px;" />
+        </div>
+      
+        <!-- Right: Who We Are Text -->
+        <div class="who-we-are" style="flex: 1; max-width: 480px; min-width: 280px; text-align: center;">
+          <h2 style="font-family: 'Lexend', sans-serif; font-weight: 700;">Who We Are</h2>
+          <p style="font-size: 0.95em; margin-bottom: 20px;">
+            My goal is to help people understand their cats a little better—with less confusion and more fun. Whether you're a seasoned cat parent or just curious about why your cat zooms around the house at 2AM, this page is for you.
+          </p>
+          <a href="resources.html" style="display: inline-block; padding: 10px 20px; background-color: #c6e3e3; color: black; font-weight: 600; border-radius: 6px; text-decoration: none; font-family: 'Lexend', sans-serif;">Resources</a>
+        </div>
+      
+      </section>
+      
+      
 
-  
   <script>
     const bottomImg = document.querySelector('.bottom-image');
-
     function animateOnScroll() {
       const imgTop = bottomImg.getBoundingClientRect().top;
       const imgBottom = bottomImg.getBoundingClientRect().bottom;
       const windowHeight = window.innerHeight;
-
       if (imgTop < windowHeight && imgBottom > 0) {
         bottomImg.classList.add('animate');
       } else {
@@ -96,10 +101,21 @@
     window.addEventListener('scroll', animateOnScroll);
     window.addEventListener('resize', animateOnScroll);
     window.addEventListener('load', animateOnScroll);
+
+    // Dropdown close on click outside
+    document.addEventListener('click', function(event) {
+      const dropdowns = document.querySelectorAll('.dropdown input[type="checkbox"]');
+      dropdowns.forEach(dropdown => {
+        if (!dropdown.parentElement.contains(event.target)) {
+          dropdown.checked = false;
+        }
+      });
+    });
   </script>
 
 </body>
 </html>
+
 
 
 

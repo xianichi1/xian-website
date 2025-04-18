@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How to Stop Scratching & Biting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="page-title">How to Stop Scratching & Biting</h1>
+
+    <nav>
+      <a href="index.html">HOME</a>
+
+      <div class="dropdown">
+        <input type="checkbox" id="why-toggle" />
+        <label for="why-toggle" class="dropdown-label">
+          WHY DO CATS? <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="kneading.html">Kneading, Zoomies, Purring, Chasing</a>
+          <a href="whycatsignoreyou.html">Why Cats Ignore You</a>
+          <a href="sleeping.html">Sleeping Habits & Territory</a>
+          <a href="communication.html">Cat Communication (Body Language, Sounds)</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <input type="checkbox" id="bond-toggle" />
+        <label for="bond-toggle" class="dropdown-label">
+          HOW TO BOND WITH YOUR CATS <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="trust.html">Signs Your Cat Trusts You</a>
+          <a href="playing.html">Playing & Socializing with Cats</a>
+          <a href="recognize.html">Do Cats Recognize Their Owners?</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <input type="checkbox" id="issues-toggle" />
+        <label for="issues-toggle" class="dropdown-label">
+          CAT ISSUES/SOLUTIONS <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="meow.html">Why is My Cat Meowing So Much?</a>
+          <a href="scratching.html">How to Stop Scratching & Biting</a>
+          <a href="litter.html">Litter Box Problems & Solutions</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="article-container">
+    <div class="main-grid">
+      
+      <!-- LEFT: Main content -->
+      <!-- LEFT: Main content -->
+<div class="content-wrapper">
+    <h2>How to Stop Scratching & Biting</h2>
+    <p>Scratching and biting are normal cat behaviors, but they can be frustrating—especially when directed at you or your furniture. Here’s how to manage them with patience and care:</p>
+    
+    <ul>
+      <li><strong>Provide Scratching Alternatives:</strong> Give your cat scratching posts or pads and place them where they already like to scratch.</li>
+      <li><strong>Use Deterrents:</strong> Try double-sided tape, citrus sprays, or furniture covers to discourage scratching specific areas.</li>
+      <li><strong>Trim Their Nails:</strong> Regular nail trimming reduces damage from scratching. Just be gentle and careful!</li>
+      <li><strong>Play Gently:</strong> If your cat bites during play, pause immediately. This helps them learn boundaries.</li>
+      <li><strong>Watch for Triggers:</strong> Overstimulation, fear, or stress can lead to biting. Pay attention to body language.</li>
+    </ul>
+  
+    <p>Never punish your cat. Instead, redirect their energy and reinforce good behavior. Over time, you’ll see real improvements!</p>
+  
+   
+    <div class="cat-bite-hover">
+      
+      <img src="images/scratching.gif" alt="Cat Biting" class="bite-gif">
+      <p class="gif-caption">hover here for a surprise</p>
+
+    </div>
+  </div>
+  
+  
+      <!-- RIGHT: Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-box">
+          <h3>Submit a Question</h3>
+          <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Ask your cat question here..." rows="4" required></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </aside>
+  
+    </div>
+  </main>
+
+  <script>
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(event) {
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        const checkbox = dropdown.querySelector('input[type="checkbox"]');
+        if (!dropdown.contains(event.target)) {
+          checkbox.checked = false;
+        }
+      });
+    });
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+

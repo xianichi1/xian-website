@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Litter Box Problems & Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .content-wrapper img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="page-title">Litter Box Problems & Solutions</h1>
+
+    <nav>
+      <a href="index.html">HOME</a>
+
+      <div class="dropdown">
+        <input type="checkbox" id="why-toggle" />
+        <label for="why-toggle" class="dropdown-label">
+          WHY DO CATS? <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="kneading.html">Kneading, Zoomies, Purring, Chasing</a>
+          <a href="whycatsignoreyou.html">Why Cats Ignore You</a>
+          <a href="sleeping.html">Sleeping Habits & Territory</a>
+          <a href="catcomms.html">Cat Communication (Body Language, Sounds)</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <input type="checkbox" id="bond-toggle" />
+        <label for="bond-toggle" class="dropdown-label">
+          HOW TO BOND WITH YOUR CATS <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="trust.html">Signs Your Cat Trusts You</a>
+          <a href="playing.html">Playing & Socializing with Cats</a>
+          <a href="recognize.html">Do Cats Recognize Their Owners?</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <input type="checkbox" id="issues-toggle" />
+        <label for="issues-toggle" class="dropdown-label">
+          CAT ISSUES/SOLUTIONS <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="meow.html">Why is My Cat Meowing So Much?</a>
+          <a href="scratching.html">How to Stop Scratching & Biting</a>
+          <a href="litter.html">Litter Box Problems & Solutions</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="article-container">
+    <div class="main-grid">
+
+      <!-- LEFT: Main content -->
+      <div class="content-wrapper">
+        <img src="images/catlitter.jpg" alt="Cat using litter box" />
+        <h2>Litter Box Problems & Solutions</h2>
+        <p>Litter box issues are a common concern among cat owners, but they can often be resolved with attention to detail and understanding your cat's needs. Cats are particular about their bathroom habits, and even small changes can lead to problems.</p>
+
+        <p>Common reasons for litter box problems include:</p>
+
+        <ul>
+          <li><strong>Unclean Litter Box:</strong> Cats prefer a clean environment. Scoop waste daily and change the litter regularly to maintain freshness.</li>
+          <li><strong>Inappropriate Litter Type:</strong> Some cats are sensitive to certain textures or scents. Unscented, clumping litter is often preferred.</li>
+          <li><strong>Poor Location:</strong> Place the litter box in a quiet, accessible area away from food and high-traffic zones.</li>
+          <li><strong>Insufficient Number of Boxes:</strong> The general rule is one box per cat, plus one extra. This prevents territorial disputes and provides options.</li>
+          <li><strong>Medical Issues:</strong> Conditions like urinary tract infections can cause litter box avoidance. Consult a veterinarian if problems persist.</li>
+        </ul>
+
+        <p>Addressing these factors can significantly improve your cat's litter box habits. Remember, patience and observation are key to understanding and resolving these issues.</p>
+      </div>
+
+      <!-- RIGHT: Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-box">
+          <h3>Insert Your Cat Photo to Be Featured</h3>
+          <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <input type="file" accept="image/*" required />
+            <textarea placeholder="Tell us a little bit about your cat..." rows="4" required></textarea>
+            <button type="submit">Upload</button>
+          </form>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <script>
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(event) {
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        const checkbox = dropdown.querySelector('input[type="checkbox"]');
+        if (!dropdown.contains(event.target)) {
+          checkbox.checked = false;
+        }
+      });
+    });
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

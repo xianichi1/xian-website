@@ -267,9 +267,253 @@ nav .caret {
     100% { transform: translate(-25px, 20px); }
   }
   
+  .article-container {
+    max-width: 1200px; /* gives room for content + sidebar */
+    margin: 40px auto;
+    padding: 0 20px;
+    font-size: 1.1em;
+    line-height: 1.75;
+    color: #222;
+    font-family: 'Lexend', sans-serif;
+  }
+  
+  
+  .content-wrapper {
+    max-width: 100%;
+    background-color:transparent;
+    padding: 10px 0;
+  }
   
 
+  /* This controls the main layout */
+.main-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
   
+  /* Left column: content */
+  .content-wrapper {
+    flex: 1 1 60%;
+    min-width: 300px;
+  }
   
+  /* Right column: sidebar */
+  .sidebar {
+    flex: 1 1 30%;
+    min-width: 250px;
+    background-color: #f0f8fa;
+    padding: 20px;
+    border-radius: 8px;
+  }
   
+  .sidebar h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar input,
+  .sidebar textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 10px;
+    font-size: 0.95em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .sidebar button {
+    background-color: #a7d4d8;
+    border: none;
+    padding: 10px 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .sidebar textarea {
+    resize: none;
+  }
+  
+  .sidebar-box {
+    padding: 20px;
+    background-color: #f0f8fa;
+    border-radius: 8px;
+    display: inline-block;
+    width: 100%;
+    height: auto; /* Add this to prevent stretching */
+    box-sizing: border-box;
+  }
+
+  .sidebar {
+    align-self: flex-start; /* Makes it only as tall as its content */
+  }
+  
+  .cat-bite-hover {
+    width: 180px;
+    margin: 20px auto 0;
+    overflow: hidden;
+  }
+  
+  .bite-gif {
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .cat-bite-hover:hover .bite-gif {
+    opacity: 1;
+  }
+  
+  .gif-caption {
+    font-size: 0.7em;
+    color: #888;
+    margin-top: 4px;
+    font-style: italic;
+    white-space: nowrap;
+  }
+
+  .toc-container {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px 24px 12px;
+    margin: 40px auto 20px;
+    font-size: 0.95em;
+    max-width: 700px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    text-align: left;
+  }
+  
+  .toc-container summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  
+  .toc-container ul {
+    margin: 10px 0 0;
+    padding-left: 20px;
+  }
+  
+  .toc-container a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .toc-container a:hover {
+    text-decoration: none;
+    color: #222;
+  }
+
+  .zoomies-gif {
+    text-align: center;
+    margin: 20px 0 40px;
+  }
+  
+  .zoomies-gif img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  
+  .purring-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin: 40px 0;
+  }
+  
+  .purring-media img {
+    max-width: 200px;
+    border-radius: 10px;
+  }
+  
+  .purr-audio-wrap button {
+    background-color: #dff3f7;
+    border: none;
+    padding: 14px 18px;
+    font-size: 1.4em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .purr-audio-wrap button:hover {
+    background-color: #c0e5ec;
+  }
+
+  #mouse {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-image: url('images/mouse.png'); /* Make sure this image exists in your images folder */
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  
+  /* Universal responsive base */
+img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend', sans-serif;
+  }
+  
+  /* Make layout more flexible */
+  .content-wrapper,
+  .sidebar,
+  .main-grid,
+  .bottom-section,
+  .left-text,
+  .right-image {
+    box-sizing: border-box;
+  }
+  
+  /* Responsive grid behavior */
+  .main-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  /* Sidebar and content stack on mobile */
+  @media (max-width: 768px) {
+    .main-grid {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+    }
+  
+    .content-wrapper {
+      width: 100%;
+      padding: 0 20px;
+    }
+  
+    .left-text,
+    .right-image {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .bottom-section {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  }
   

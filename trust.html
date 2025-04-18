@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signs Your Cat Trusts You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="page-title">Signs Your Cat Trusts You</h1>
+
+    <nav>
+      <a href="index.html">HOME</a>
+
+      <div class="dropdown">
+        <input type="checkbox" id="why-toggle" />
+        <label for="why-toggle" class="dropdown-label">
+          WHY DO CATS? <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="kneading.html">Kneading, Zoomies, Purring, Chasing</a>
+          <a href="whycatsignoreyou.html">Why Cats Ignore You</a>
+          <a href="sleeping.html">Sleeping Habits & Territory</a>
+          <a href="catcomms.html">Cat Communication (Body Language, Sounds)</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <input type="checkbox" id="bond-toggle" />
+        <label for="bond-toggle" class="dropdown-label">
+          HOW TO BOND WITH YOUR CATS <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="trust.html">Signs Your Cat Trusts You</a>
+          <a href="playing.html">Playing & Socializing with Cats</a>
+          <a href="recognize.html">Do Cats Recognize Their Owners?</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <input type="checkbox" id="issues-toggle" />
+        <label for="issues-toggle" class="dropdown-label">
+          CAT ISSUES/SOLUTIONS <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="meow.html">Why is My Cat Meowing So Much?</a>
+          <a href="scratching.html">How to Stop Scratching & Biting</a>
+          <a href="litter.html">Litter Box Problems & Solutions</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="article-container">
+    <div class="main-grid">
+      
+      <!-- LEFT: Main content -->
+      <div class="content-wrapper">
+        <h2>How Do You Know Your Cat Trusts You?</h2>
+        <p>Cats can be subtle with their affection, but once they trust you, they show it in unique and heartwarming ways. Trust from a cat isn’t automatic—it’s built over time through consistent care, respect, and patience.</p>
+
+        <h3>Key Behaviors That Signal Trust</h3>
+        <ul>
+          <li><strong>Slow Blinking:</strong> If your cat looks at you and blinks slowly, it’s like a kitty kiss. Try slow-blinking back!</li>
+          <li><strong>Kneading:</strong> When they push their paws rhythmically on you or soft surfaces, it’s a throwback to kitten comfort.</li>
+          <li><strong>Showing Their Belly:</strong> If your cat flops over and exposes their stomach, that’s huge—they feel safe.</li>
+          <li><strong>Following You Around:</strong> Even if it’s just to sit nearby, your cat wants to be part of your world.</li>
+          <li><strong>Head Butting:</strong> This behavior marks you with their scent and signifies deep bonding.</li>
+          <li><strong>Sleeping Near You:</strong> Cats only rest near those they feel secure around.</li>
+          <li><strong>Tail Wrapped Around You:</strong> Like a feline hug, it’s a sure sign of comfort and affection.</li>
+        </ul>
+
+        <h3>Trust Is Earned, Not Demanded</h3>
+        <p>Every cat is different—some are naturally cuddly, while others need more space. What matters is that you meet your cat where they’re at. Give them choice, consistency, and calmness, and they’ll likely reward you with their trust over time.</p>
+
+        <!-- Optional Visual Suggestion -->
+        <div style="text-align:center; margin-top: 30px;">
+          <img src="images/catbelly.jpg" alt="Cat showing its belly" style="max-width: 300px; border-radius: 10px;">
+          <p style="font-size: 0.9em; color: #666;">A trusting cat might lie like this—vulnerable and relaxed.</p>
+        </div>
+      </div>
+  
+      <!-- RIGHT: Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-box">
+          <h3>Submit a Question</h3>
+          <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Ask your cat question here..." rows="4" required></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </aside>
+  
+    </div>
+  </main>
+
+  <script>
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(event) {
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        const checkbox = dropdown.querySelector('input[type="checkbox"]');
+        if (!dropdown.contains(event.target)) {
+          checkbox.checked = false;
+        }
+      });
+    });
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+

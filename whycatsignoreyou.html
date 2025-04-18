@@ -23,9 +23,9 @@
         </label>
         <div class="dropdown-content">
           <a href="kneading.html">Kneading, Zoomies, Purring, Chasing</a>
-          <a href="ignore.html">Why Cats Ignore You</a>
-          <a href="#">Sleeping Habits & Territory</a>
-          <a href="#">Cat Communication (Body Language, Sounds)</a>
+          <a href="whycatsignoreyou.html">Why Cats Ignore You</a>
+          <a href="Sleeping.html">Sleeping Habits & Territory</a>
+          <a href="catcomms.html">Cat Communication (Body Language, Sounds)</a>
         </div>
       </div>
 
@@ -35,9 +35,9 @@
           HOW TO BOND WITH YOUR CATS <span class="caret">˅</span>
         </label>
         <div class="dropdown-content">
-          <a href="#">Signs Your Cat Trusts You</a>
-          <a href="#">Playing & Socializing with Cats</a>
-          <a href="#">Do Cats Recognize Their Owners?</a>
+          <a href="trust.html">Signs Your Cat Trusts You</a>
+          <a href="playing.html">Playing & Socializing with Cats</a>
+          <a href="recognize.html">Do Cats Recognize Their Owners?</a>
         </div>
       </div>
 
@@ -47,42 +47,62 @@
           CAT ISSUES/SOLUTIONS <span class="caret">˅</span>
         </label>
         <div class="dropdown-content">
-          <a href="#">Why is My Cat Meowing So Much?</a>
-          <a href="#">How to Stop Scratching & Biting</a>
-          <a href="#">Litter Box Problems & Solutions</a>
+          <a href="meow.html">Why is My Cat Meowing So Much?</a>
+          <a href="scratching.html">How to Stop Scratching & Biting</a>
+          <a href="litter.html">Litter Box Problems & Solutions</a>
         </div>
       </div>
     </nav>
   </header>
 
   <main class="article-container">
-   
-    <h2>Understanding Why Cats May Ignore Their Owners</h2>
-    <p>Cats are known for their independent nature, and sometimes they may seem to ignore their owners. This behavior can be attributed to several factors:</p>
-    <ul>
-      <li><strong>Natural Instincts:</strong> Cats are solitary hunters by nature and may not always seek interaction.</li>
-      <li><strong>Need for Personal Space:</strong> Cats value their personal space and may withdraw if they feel crowded.</li>
-      <li><strong>Stress or Anxiety:</strong> Changes in the environment or routine can cause cats to become anxious and less responsive.</li>
-      <li><strong>Health Issues:</strong> If a cat suddenly starts ignoring you, it might be due to underlying health problems.</li>
-    </ul>
 
-    <h2>Building a Stronger Bond with Your Cat</h2>
-    <p>To encourage your cat to be more interactive:</p>
-    <ul>
-      <li>Respect their personal space and allow them to initiate contact.</li>
-      <li>Engage in regular play sessions using toys that stimulate their hunting instincts.</li>
-      <li>Maintain a consistent routine to provide a sense of security.</li>
-      <li>Ensure they have a comfortable environment with safe hiding spots.</li>
-    </ul>
+    <!-- Inserted Image -->
+    <div style="text-align: center; margin-bottom: 20px;">
+      <img src="images/leavemealone.jpg" alt="Cat saying leave me alone" style="max-width: 100%; border-radius: 10px;">
+    </div>
 
-    <p>Understanding and respecting your cat's individual personality and needs can lead to a more fulfilling relationship.</p>
+    <div class="content-wrapper">
+      <h2>Understanding Why Cats May Ignore Their Owners</h2>
+      <p>
+        If your cat has ever walked away mid-conversation (yes, we all talk to them), you’re not alone. Many cats seem to ignore their owners, and while it can feel like rejection, it’s often just a matter of feline behavior. Cats are naturally more independent and less attention-seeking than dogs. When a cat ignores you, it doesn't mean they dislike you—it might mean they trust you enough to simply be themselves.
+      </p>
+      <p>
+        Often, cats will distance themselves when they’re overstimulated, tired, or simply comfortable in their own space. It’s their way of self-regulating. Unlike dogs, cats don’t feel the need to constantly engage for validation. Some cats are more social than others, but for many, ignoring their human is just part of the rhythm of their day.
+      </p>
+      <p>
+        Environmental changes, such as new furniture, guests, or even different feeding times, can cause anxiety in cats and make them retreat. A cat experiencing stress will often hide or become less responsive, and it’s important to recognize this as a coping mechanism, not a sign of dislike. And if your cat is acting off and consistently avoiding you when they normally don’t, a quick check-in with the vet might be a good idea—it could be related to discomfort or illness.
+      </p>
+
+      <h2>How to Rebuild Trust and Engagement</h2>
+      <p>
+        The key to improving your relationship with your cat is patience. Let them approach you on their own terms. Avoid forcing interaction—cats appreciate the choice to engage. Try creating calm, predictable routines and engaging them through play with toys that mimic natural prey, such as feathers or strings.
+      </p>
+      <p>
+        Providing hiding spaces, cozy resting spots, and a stable environment will help your cat feel safe and more willing to interact. Speak gently, blink slowly (yes, it’s real cat body language!), and reward small interactions with treats or affection if they’re receptive. Over time, your cat will learn that your presence is not a threat—and may even start seeking you out more.
+      </p>
+      <p>
+        Ignoring, in cat language, often just means “I’m okay doing my own thing right now.” By respecting that, you show your cat you understand them—and that’s where the trust begins to grow.
+      </p>
+    </div>
   </main>
 
   <div class="cat-container">
-    <img src="images/cATIGNORE.png" alt="Grumpy cat ignoring you" class="ignoring-cat">
+    <img src="images/cATIGNORE.png" alt="Grumpy cat ignoring you" class="ignoring-cat" id="ignoring-cat">
   </div>
-  
 
+  <!-- Click-off for dropdowns -->
+  <script>
+    document.addEventListener('click', function(event) {
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        const radio = dropdown.querySelector('input[type="radio"]');
+        if (!dropdown.contains(event.target)) {
+          radio.checked = false;
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>

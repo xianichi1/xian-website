@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Why is My Cat Meowing So Much?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="page-title">Why is My Cat Meowing So Much?</h1>
+
+    <nav>
+      <a href="index.html">HOME</a>
+
+      <div class="dropdown">
+        <input type="checkbox" id="why-toggle" />
+        <label for="why-toggle" class="dropdown-label">
+          WHY DO CATS? <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="kneading.html">Kneading, Zoomies, Purring, Chasing</a>
+          <a href="whycatsignoreyou.html">Why Cats Ignore You</a>
+          <a href="sleeping.html">Sleeping Habits & Territory</a>
+          <a href="catcomms.html">Cat Communication (Body Language, Sounds)</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <input type="checkbox" id="bond-toggle" />
+        <label for="bond-toggle" class="dropdown-label">
+          HOW TO BOND WITH YOUR CATS <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="trust.html">Signs Your Cat Trusts You</a>
+          <a href="playing.html">Playing & Socializing with Cats</a>
+          <a href="recognize.html">Do Cats Recognize Their Owners?</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <input type="checkbox" id="issues-toggle" />
+        <label for="issues-toggle" class="dropdown-label">
+          CAT ISSUES/SOLUTIONS <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="meowing.html">Why is My Cat Meowing So Much?</a>
+          <a href="scratching.html">How to Stop Scratching & Biting</a>
+          <a href="litter.html">Litter Box Problems & Solutions</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="article-container">
+    <div class="main-grid">
+      
+      <!-- LEFT: Main content -->
+      <div class="content-wrapper">
+        <h2>Why is My Cat Meowing So Much?</h2>
+        <p>Meowing is one of the main ways cats communicate with humans, and it can mean a bunch of different things depending on the context. While all cats meow, some do it more than others—and when it seems constant, it's usually your cat's way of trying to tell you something important.</p>
+
+        <p>Here are some of the most common reasons for frequent meowing:</p>
+
+        <ul>
+          <li><strong>Hunger or Thirst:</strong> If meowing happens around mealtimes or near the kitchen, your cat’s probably asking for food or a refill on water.</li>
+          <li><strong>Loneliness or Boredom:</strong> Cats may meow when they’re feeling ignored or unstimulated, especially if they’re home alone a lot.</li>
+          <li><strong>Medical Issues:</strong> Pain, confusion (especially in older cats), or illness can all lead to vocal behavior that seems out of character. Always check with a vet if something feels off.</li>
+          <li><strong>Stress or Changes:</strong> New furniture, new pets, travel, or moving can throw your cat off and make them more vocal.</li>
+          <li><strong>Breed Personality:</strong> Some breeds, like Siamese or Bengals, are just naturally chatty and love a good “conversation.”</li>
+        </ul>
+
+        <p>If the meowing seems non-stop, start by checking the basics—food, water, litter box, and routine. Then pay attention to patterns. Is it happening when you leave? When you go to sleep? Your cat may just be trying to stay connected or express a need that’s not being met.</p>
+
+        <p>Once you get a better sense of what they’re asking for, you can respond in a way that makes both of you feel more at ease. And hey—sometimes they’re just saying hi.</p>
+
+        <!-- Inserted cat image -->
+        <img src="images/catmeow .jpg" alt="Grumpy cat with 'meh' text" style="max-width: 100%; margin-top: 25px; border-radius: 10px;">
+      </div>
+  
+      <!-- RIGHT: Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-box">
+          <h3>Insert Your Cat Photo to Be Featured</h3>
+          <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <input type="file" accept="image/*" required />
+            <textarea placeholder="Tell us a little bit about your cat..." rows="4" required></textarea>
+            <button type="submit">Upload</button>
+          </form>
+        </div>
+      </aside>
+  
+    </div>
+  </main>
+
+  <script>
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(event) {
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        const checkbox = dropdown.querySelector('input[type="checkbox"]');
+        if (!dropdown.contains(event.target)) {
+          checkbox.checked = false;
+        }
+      });
+    });
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+

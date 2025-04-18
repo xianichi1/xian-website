@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cat Communication</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="page-title">Cat Communication</h1>
+
+    <nav>
+      <a href="index.html">HOME</a>
+
+      <div class="dropdown">
+        <input type="radio" id="why-toggle" name="nav-toggle">
+        <label for="why-toggle" class="dropdown-label">
+          WHY DO CATS? <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="kneading.html">Kneading, Zoomies, Purring, Chasing</a>
+          <a href="whycatsignoreyou.html">Why Cats Ignore You</a>
+          <a href="sleeping.html">Sleeping Habits & Territory</a>
+          <a href="catcomms.html">Cat Communication</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <input type="radio" id="bond-toggle" name="nav-toggle">
+        <label for="bond-toggle" class="dropdown-label">
+          HOW TO BOND WITH YOUR CATS <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="trust.html">Signs Your Cat Trusts You</a>
+          <a href="playing.html">Playing & Socializing with Cats</a>
+          <a href="recognize.html">Do Cats Recognize Their Owners?</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <input type="radio" id="issues-toggle" name="nav-toggle">
+        <label for="issues-toggle" class="dropdown-label">
+          CAT ISSUES/SOLUTIONS <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="meow.html">Why is My Cat Meowing So Much?</a>
+          <a href="scratching.html">How to Stop Scratching & Biting</a>
+          <a href="litter.html">Litter Box Problems & Solutions</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="article-container">
+    <div class="content-wrapper">
+
+      <h2>Understanding Cat Communication</h2>
+      <p>Cats might not use words, but they’re constantly communicating—through posture, expressions, movements, and sounds. Understanding your cat means learning to observe and listen beyond the obvious. When we start picking up on their signals, we realize how often our cats are trying to tell us what they want or need.</p>
+
+      <h2>Body Language: What They’re Saying Without Words</h2>
+<p>A cat’s body is incredibly expressive. You just need to learn the signs:</p>
+
+<div style="display: flex; align-items: flex-start; justify-content: center; gap: 60px; flex-wrap: wrap; margin-top: 20px;">
+  <!-- Bullet Points -->
+  <ul style="max-width: 600px; margin: 0;">
+    <li><strong>Tail up:</strong> Confidence and friendliness.</li>
+    <li><strong>Tail tucked:</strong> Fear or uncertainty.</li>
+    <li><strong>Puffed tail:</strong> Alarmed or startled.</li>
+    <li><strong>Slow blinking:</strong> Trust and affection.</li>
+    <li><strong>Ears forward:</strong> Curiosity or engagement.</li>
+    <li><strong>Ears sideways or back:</strong> Overstimulation or discomfort.</li>
+    <li><strong>Arched back with raised fur:</strong> Defense mode—stay back!</li>
+    <li><strong>Relaxed body, lying on side:</strong> Comfort and safety.</li>
+  </ul>
+
+  <!-- GIF -->
+  <img src="images/catblink.gif" alt="Cat slow blinking gif" style="max-width: 160px; border-radius: 12px; margin-top: 10px;">
+</div>
+
+<p style="margin-top: 25px;">Reading these physical cues gives insight into your cat’s mood. The more you observe, the more you’ll pick up their unique signals.</p>
+
+      <h2>The Sounds of a Cat’s Voice</h2>
+      <p>Cats may be quiet animals, but they know how to get their point across vocally. Meows can mean many things—greeting, hunger, attention. A trill or chirp might be a way of saying hello or calling you over, especially between bonded cats and humans. Chattering often happens at windows when watching birds or squirrels—it’s part frustration, part instinct.</p>
+
+      <p>Purring is usually a happy sound, but cats can also purr when they’re scared or in pain as a way of calming themselves. And of course, hissing and growling are clear signs to back off—these should always be respected.</p>
+
+      <h2>Why Learning Their Language Matters</h2>
+      <p>Once you understand the signals, it feels like you’re finally having a two-way conversation with your cat. Instead of guessing what they need, you’re responding to what they’re showing you. That builds trust and makes everyday life smoother—for both of you.</p>
+    </div>
+
+    <div style="margin-top: 40px; text-align: center;">
+      <h3 style="margin-bottom: 10px;"> Cat Soundboard</h3>
+      <p>Click a button to hear common cat sounds.</p>
+      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+        <div>
+          <button onclick="toggleSound('meow')">Meow</button>
+          <audio id="meow" src="audio/catmeow.mp3"></audio>
+        </div>
+        <div>
+          <button onclick="toggleSound('purr')">Purr</button>
+          <audio id="purr" src="audio/catpur.mp3"></audio>
+        </div>
+        <div>
+          <button onclick="toggleSound('hiss')">Hiss</button>
+          <audio id="hiss" src="audio/cathiss.mp3"></audio>
+        </div>
+        <div>
+          <button onclick="toggleSound('chirp')">Chirp</button>
+          <audio id="chirp" src="audio/catchurp.mp3"></audio>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      const sounds = ['meow', 'purr', 'hiss', 'chirp'];
+    
+      function toggleSound(id) {
+        sounds.forEach(soundId => {
+          const audio = document.getElementById(soundId);
+          if (soundId === id) {
+            if (audio.paused) {
+              audio.play();
+            } else {
+              audio.pause();
+              audio.currentTime = 0;
+            }
+          } else {
+            audio.pause();
+            audio.currentTime = 0;
+          }
+        });
+      }
+    </script>
+    
+    
+  </main>
+
+  <script>
+    // Dropdowns close when clicking outside
+    document.addEventListener('click', function(event) {
+      const dropdowns = document.querySelectorAll('.dropdown input[type="radio"]');
+      dropdowns.forEach(dropdown => {
+        if (!dropdown.parentElement.contains(event.target)) {
+          dropdown.checked = false;
+        }
+      });
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

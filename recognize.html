@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Do Cats Recognize Their Owners?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .article-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 25px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="page-title">Do Cats Recognize Their Owners?</h1>
+
+    <nav>
+      <a href="index.html">HOME</a>
+
+      <div class="dropdown">
+        <input type="checkbox" id="why-toggle" />
+        <label for="why-toggle" class="dropdown-label">
+          WHY DO CATS? <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="kneading.html">Kneading, Zoomies, Purring, Chasing</a>
+          <a href="whycatsignoreyou.html">Why Cats Ignore You</a>
+          <a href="sleeping.html">Sleeping Habits & Territory</a>
+          <a href="catcomms.html">Cat Communication (Body Language, Sounds)</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <input type="checkbox" id="bond-toggle" />
+        <label for="bond-toggle" class="dropdown-label">
+          HOW TO BOND WITH YOUR CATS <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="trust.html">Signs Your Cat Trusts You</a>
+          <a href="playing.html">Playing & Socializing with Cats</a>
+          <a href="recognize.html">Do Cats Recognize Their Owners?</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <input type="checkbox" id="issues-toggle" />
+        <label for="issues-toggle" class="dropdown-label">
+          CAT ISSUES/SOLUTIONS <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="meow.html">Why is My Cat Meowing So Much?</a>
+          <a href="scratching.html">How to Stop Scratching & Biting</a>
+          <a href="litter.html">Litter Box Problems & Solutions</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="article-container">
+    <div class="main-grid">
+      
+      <!-- LEFT: Main content -->
+      <div class="content-wrapper">
+        <img src="images/catrecognize.png" alt="Cat looking in mirror" class="article-image">
+
+        <h2>Do Cats Recognize Their Owners?</h2>
+        <p>Cats may have a reputation for independence, but they form strong bonds with their humans. While they might not greet you at the door like a dog, cats recognize their owners through various senses and behaviors.</p>
+
+        <p><strong>Olfactory Recognition:</strong> Cats possess an acute sense of smell, nearly as strong as dogs. They can distinguish individual human scents, allowing them to identify their owners even without visual cues. This scent memory is a primary method cats use to recognize familiar people.</p>
+
+        <p><strong>Auditory Recognition:</strong> Cats are adept at recognizing their owner's voice and can differentiate it from others. They also identify people by the unique sounds of their footsteps, associating these auditory cues with specific individuals.</p>
+
+        <p><strong>Visual Recognition:</strong> While cats don't rely heavily on facial recognition, they can identify their owners by combining visual cues with other senses. They may also use eye contact to gauge emotions, though prolonged staring can be perceived as threatening.</p>
+
+        <p><strong>Behavioral Recognition:</strong> Cats remember routines and behaviors. They notice who feeds them, who plays with them, and who provides comfort. These associations reinforce their recognition and bond with their owners.</p>
+
+        <p>Understanding these recognition methods highlights the depth of the feline-human relationship. By acknowledging how cats perceive us, we can strengthen our connection with them.</p>
+      </div>
+  
+      <!-- RIGHT: Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-box">
+          <h3>Insert Your Cat Photo to Be Featured</h3>
+          <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <input type="file" accept="image/*" required />
+            <textarea placeholder="Tell us a little bit about your cat..." rows="4" required></textarea>
+            <button type="submit">Upload</button>
+          </form>
+        </div>
+      </aside>
+  
+    </div>
+  </main>
+
+  <script>
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(event) {
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        const checkbox = dropdown.querySelector('input[type="checkbox"]');
+        if (!dropdown.contains(event.target)) {
+          checkbox.checked = false;
+        }
+      });
+    });
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+

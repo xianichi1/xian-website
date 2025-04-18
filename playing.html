@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Playing & Socializing with Cats</title>
+  <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .game-container {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    #play-area {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      background-color: #f0f8fa;
+      margin: 0 auto;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+      overflow: hidden;
+    }
+
+    #mouse {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background-image: url('images/mouse.png'); /* Adjust this path if needed */
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+
+    #score {
+      margin-top: 10px;
+      font-weight: 600;
+    }
+
+    .game-instructions {
+      font-size: 0.95em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="page-title">Playing & Socializing with Cats</h1>
+
+    <nav>
+      <a href="index.html">HOME</a>
+
+      <div class="dropdown">
+        <input type="checkbox" id="why-toggle" />
+        <label for="why-toggle" class="dropdown-label">
+          WHY DO CATS? <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="kneading.html">Kneading, Zoomies, Purring, Chasing</a>
+          <a href="whycatsignoreyou.html">Why Cats Ignore You</a>
+          <a href="sleeping.html">Sleeping Habits & Territory</a>
+          <a href="catcomms.html">Cat Communication (Body Language, Sounds)</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <input type="checkbox" id="bond-toggle" />
+        <label for="bond-toggle" class="dropdown-label">
+          HOW TO BOND WITH YOUR CATS <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="trust.html">Signs Your Cat Trusts You</a>
+          <a href="playing.html">Playing & Socializing with Cats</a>
+          <a href="recognize.html">Do Cats Recognize Their Owners?</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <input type="checkbox" id="issues-toggle" />
+        <label for="issues-toggle" class="dropdown-label">
+          CAT ISSUES/SOLUTIONS <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="meow.html">Why is My Cat Meowing So Much?</a>
+          <a href="scratching.html">How to Stop Scratching & Biting</a>
+          <a href="litter.html">Litter Box Problems & Solutions</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="article-container">
+    <div class="main-grid">
+      <div class="content-wrapper">
+        <h2>Playing & Socializing with Cats</h2>
+        <p>Play isn't just fun for cats—it's fundamental to their mental health, physical well-being, and relationship with you. Engaging your cat in daily playtime mimics their natural hunting behaviors, helps reduce boredom, and builds emotional connection. Whether they’re a kitten or a senior, cats benefit greatly from structured, interactive sessions.</p>
+
+        <p>Cats are natural predators, and playing with objects that resemble prey—like a dangling feather, a bouncing string, or a scurrying mouse—activates their instinctual chase-and-pounce cycle. It gives them an outlet for energy and satisfies their need for stimulation in indoor environments.</p>
+
+        <ul>
+          <li><strong>Interactive Play:</strong> Use wand toys or strings to simulate prey and engage their attention.</li>
+          <li><strong>Daily Routines:</strong> Short, regular sessions help create comfort and consistency.</li>
+          <li><strong>Safe Socialization:</strong> Introduce other animals slowly and with positive reinforcement.</li>
+          <li><strong>Reading Cues:</strong> If your cat seems overstimulated or walks away, let them reset.</li>
+          <li><strong>Let Them Win:</strong> Letting your cat “catch” a toy builds confidence and satisfaction.</li>
+        </ul>
+      </div>
+
+      <aside class="sidebar">
+        <div class="sidebar-box">
+          <h3>Submit a Question</h3>
+          <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Ask your cat question here..." rows="4" required></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </aside>
+    </div>
+
+    <!-- 🎮 INTERACTIVE GAME -->
+    <div class="game-container">
+      <p class="game-instructions">Click the mouse when it appears to score points!</p>
+      <div id="play-area">
+        <div id="mouse"></div>
+      </div>
+      <p id="score">Score: 0</p>
+      <p style="margin-top: 10px; font-size: 0.95em; max-width: 500px; margin-left: auto; margin-right: auto; color: #444;">
+        Cats go wild for fast-moving things like mice—it’s in their nature! Games like this let them chase and pounce just like they would in the wild.
+      </p>
+    </div>
+  </main>
+
+  <!-- Dropdown click off -->
+  <script>
+    document.addEventListener('click', function(event) {
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        const checkbox = dropdown.querySelector('input[type="checkbox"]');
+        if (!dropdown.contains(event.target)) {
+          checkbox.checked = false;
+        }
+      });
+    });
+  </script>
+
+  <!-- 🎮 GAME LOGIC -->
+  <script>
+    const mouse = document.getElementById("mouse");
+    const scoreDisplay = document.getElementById("score");
+    let score = 0;
+
+    function moveMouse() {
+      const area = document.getElementById("play-area");
+      const maxX = area.clientWidth - mouse.clientWidth;
+      const maxY = area.clientHeight - mouse.clientHeight;
+      const x = Math.random() * maxX;
+      const y = Math.random() * maxY;
+      mouse.style.left = x + "px";
+      mouse.style.top = y + "px";
+    }
+
+    mouse.addEventListener("click", () => {
+      score++;
+      scoreDisplay.textContent = `Score: ${score}`;
+      moveMouse();
+    });
+
+    moveMouse(); // Initial mouse spawn
+    setInterval(moveMouse, 800); // Faster movement
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sleeping Habits & Territory</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="page-title">Sleeping Habits & Territory</h1>
+
+    <nav>
+      <a href="index.html">HOME</a>
+
+      <div class="dropdown">
+        <input type="checkbox" id="why-toggle">
+        <label for="why-toggle" class="dropdown-label">
+          WHY DO CATS? <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="kneading.html">Kneading, Zoomies, Purring, Chasing</a>
+          <a href="whycatsignoreyou.html">Why Cats Ignore You</a>
+          <a href="Sleeping.html">Sleeping Habits & Territory</a>
+          <a href="catcomms.html">Cat Communication (Body Language, Sounds)</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <input type="checkbox" id="bond-toggle">
+        <label for="bond-toggle" class="dropdown-label">
+          HOW TO BOND WITH YOUR CATS <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="trust.html">Signs Your Cat Trusts You</a>
+          <a href="playing.html">Playing & Socializing with Cats</a>
+          <a href="recognize.html">Do Cats Recognize Their Owners?</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <input type="checkbox" id="issues-toggle">
+        <label for="issues-toggle" class="dropdown-label">
+          CAT ISSUES/SOLUTIONS <span class="caret">˅</span>
+        </label>
+        <div class="dropdown-content">
+          <a href="meow.html">Why is My Cat Meowing So Much?</a>
+          <a href="scratching.html">How to Stop Scratching & Biting</a>
+          <a href="litter.html">Litter Box Problems & Solutions</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="article-container">
+    <div class="content-wrapper">
+
+      <h2>Understanding Cat Sleeping Habits</h2>
+      <p>Cats are known for their love of sleep—on average, they snooze between 12 to 16 hours a day, with kittens and seniors sleeping even more. This behavior isn’t laziness; it’s instinctual. In the wild, cats are predators that conserve energy between short, intense bursts of hunting. Even our domesticated companions retain that evolutionary rhythm—long naps followed by sudden bursts of energy (like midnight zoomies).</p>
+      <p>Most cats gravitate toward warm, soft, and elevated spots for sleeping. These areas offer a combination of safety, quiet, and a vantage point—essential elements for animals wired to watch their surroundings. Over time, your cat may return to the same sleeping places repeatedly, marking them as trusted personal zones within your home.</p>
+
+      <h2>Territory and the Importance of Space</h2>
+      <p>Territory is everything to a cat. They instinctively divide their environment into zones for eating, sleeping, playing, and using the litter box. This territorial behavior helps them feel in control and secure. When a cat rubs its face on furniture, scratches objects, or even curls up on your sweatshirt, it’s leaving behind scent markers to claim space as their own.</p>
+      <p>Having access to hiding spots—like boxes, shelves, or under the bed—allows cats to retreat and regulate their comfort levels. This is especially important in multi-cat households, where each cat benefits from multiple perches, separate sleeping areas, and privacy. When cats don’t feel like they have control over their space, it can lead to stress or even conflict with other pets.</p>
+      <p>Creating a cat-friendly environment isn’t just about buying beds or toys; it’s about observing where your cat naturally feels comfortable and making those spots accessible and safe. Whether they choose a windowsill, bookshelf, or even your laundry basket, giving them permission to claim their favorite places is one of the best ways to build trust and support their well-being.</p>
+
+     <!-- 🌙 SLEEP CALCULATOR START -->
+<div style="margin: 40px 0; text-align: center;">
+  <h3 style="margin-bottom: 14px;">How old is your cat?</h3>
+  <select id="agePicker" style="padding: 10px 14px 10px 14px; padding-right: 40px; font-size: 1em; border-radius: 6px; border: 1px solid #aaa;">
+    <option disabled selected>Select an age range</option>
+    <option value="kitten">Kitten</option>
+    <option value="adult">Adult</option>
+    <option value="senior">Senior</option>
+  </select>
+  <p id="sleepEstimate" style="margin-top: 15px; font-style: italic; font-weight: 500;"></p>
+  <img src="images/sleepingcat.gif" alt="Sleeping cat gif" style="max-width: 180px; margin-top: 20px; border-radius: 12px;">
+</div>
+<!-- 🌙 SLEEP CALCULATOR END -->
+
+
+    </div>
+  </main>
+
+  <script>
+    // Dropdown menu closes when clicking outside
+    document.addEventListener('click', function(event) {
+      const dropdowns = document.querySelectorAll('.dropdown input[type="checkbox"]');
+      dropdowns.forEach(dropdown => {
+        if (!dropdown.parentElement.contains(event.target)) {
+          dropdown.checked = false;
+        }
+      });
+    });
+
+    // Sleep Estimator
+    const picker = document.getElementById('agePicker');
+    const display = document.getElementById('sleepEstimate');
+    picker.addEventListener('change', () => {
+      if (picker.value === 'kitten') display.textContent = "Kittens sleep 16–20 hours a day!";
+      else if (picker.value === 'adult') display.textContent = "Adult cats usually sleep 12–16 hours.";
+      else if (picker.value === 'senior') display.textContent = "Senior cats may sleep up to 20 hours a day.";
+      else display.textContent = "";
+    });
+  </script>
+
+</body>
+</html>
+
+
+

@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  
-
-
-  <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
+  <title>About Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,53 +13,70 @@
     <h1 class="page-title">About Me</h1>
     <nav>
       <a href="index.html">HOME</a>
-
-      <div class="dropdown">
-        <input type="radio" id="why-toggle" name="nav-toggle">
-        <label for="why-toggle" class="dropdown-label">
-          WHY DO CATS? <span class="caret">˅</span>
-        </label>
-        <div class="dropdown-content">
-          <a href="#">Behavior Basics</a>
-          <a href="#">Body Language</a>
-          <a href="#">Meowing Meaning</a>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <input type="radio" id="bond-toggle" name="nav-toggle">
-        <label for="bond-toggle" class="dropdown-label">
-          HOW TO BOND WITH YOUR CATS <span class="caret">˅</span>
-        </label>
-        <div class="dropdown-content">
-          <a href="#">Trust Building</a>
-          <a href="#">Playtime</a>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <input type="radio" id="issues-toggle" name="nav-toggle">
-        <label for="issues-toggle" class="dropdown-label">
-          CAT ISSUES/SOLUTIONS <span class="caret">˅</span>
-        </label>
-        <div class="dropdown-content">
-          <a href="#">Scratching</a>
-          <a href="#">Litter Box Trouble</a>
-        </div>
-      </div>
     </nav>
   </header>
 
-  <section class="content">
-    <div class="left-text">
-      <h2>Hey, I'm Xian 👋</h2>
-      <p>Thanks for checking out my site! I made this because I’ve always been curious about why cats do the things they do. You know—those little quirks, weird habits, and funny moods they get into? I wanted a space to figure that stuff out and share what I learn.</p>
-      <p>Most of this is based on my own experiences and research, and honestly just spending a lot of time hanging out with cats and paying attention. I'm not a vet or anything—just someone who really loves learning how to connect with them better.</p>
+  <main class="article-container">
+    <div class="main-grid" style="display: flex; gap: 60px; align-items: flex-start;">
+      
+      <!-- LEFT: Text & Fun Facts -->
+      <div class="content-wrapper" style="flex: 1;">
+        <h2 style="font-family: 'Lexend', sans-serif;">Hey, I'm Xian </h2>
+        <p>Thanks for checking out my site! I made this because I’ve always been curious about why cats do the things they do. You know—those little quirks, weird habits, and funny moods they get into? I wanted a space to figure that stuff out and share what I learn.</p>
+
+        <p>Most of this is based on my own experiences and research, and honestly just spending a lot of time hanging out with cats and paying attention. I’m not a vet or anything—just someone who really loves learning how to connect with them better.</p>
+
+        <p>I’m currently a second-year Graphic Design student. I’m 20 years old while building this, and I also love basketball, fashion, and (obviously) cats. This site is kind of my creative corner for blending all that together.</p>
+
+        <!-- Fun Facts -->
+        <div style="margin-top: 50px;">
+          <h3 style="font-family: 'Lexend', sans-serif; font-size: 1.3em;">Fun Facts About Me</h3>
+          <ul style="margin-top: 15px; line-height: 1.8em;">
+            <li>I’ve never broken a bone</li>
+            <li>I was born in the Philippines and moved to Canada when I was 3</li>
+            <li>My favorite color is purple</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- RIGHT: Image + Forms -->
+      <aside class="sidebar" style="flex: 1; max-width: 420px;">
+        <div class="sidebar-box">
+          <img src="images/aboutmecat.jpeg"  style="width: 100%; border-radius: 8px; margin-bottom: 20px;" />
+
+          <h3>Submit a Question</h3>
+          <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Ask your cat question here..." rows="4" required></textarea>
+            <button type="submit">Send</button>
+          </form>
+
+          <h3 style="margin-top: 30px;">Insert Your Cat Photo</h3>
+          <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <input type="file" accept="image/*" required />
+            <textarea placeholder="Tell us a little bit about your cat..." rows="4" required></textarea>
+            <button type="submit">Upload</button>
+          </form>
+        </div>
+      </aside>
     </div>
-    <div class="right-image">
-      <img src="images/graycat.jpg" alt="Xian with a cat" />
-    </div>
-  </section>
+  </main>
+
+  <script>
+    document.addEventListener('click', function(event) {
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        const radio = dropdown.querySelector('input[type="radio"]');
+        if (!dropdown.contains(event.target)) {
+          radio.checked = false;
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
+
