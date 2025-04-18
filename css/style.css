@@ -173,7 +173,7 @@ button a {
   border-radius: 4px;
 }
 
-/* Responsive styles */
+
 @media (max-width: 768px) {
   .content {
     flex-direction: column;
@@ -268,7 +268,7 @@ nav .caret {
   }
   
   .article-container {
-    max-width: 1200px; /* gives room for content + sidebar */
+    max-width: 1200px; /* room for content + sidebar */
     margin: 40px auto;
     padding: 0 20px;
     font-size: 1.1em;
@@ -285,7 +285,7 @@ nav .caret {
   }
   
 
-  /* This controls the main layout */
+  /* control for main layout */
 .main-grid {
     display: flex;
     flex-wrap: wrap;
@@ -345,12 +345,12 @@ nav .caret {
     border-radius: 8px;
     display: inline-block;
     width: 100%;
-    height: auto; /* Add this to prevent stretching */
+    height: auto; 
     box-sizing: border-box;
   }
 
   .sidebar {
-    align-self: flex-start; /* Makes it only as tall as its content */
+    align-self: flex-start; 
   }
   
   .cat-bite-hover {
@@ -454,13 +454,13 @@ nav .caret {
     position: absolute;
     width: 60px;
     height: 60px;
-    background-image: url('images/mouse.png'); /* Make sure this image exists in your images folder */
+    background-image: url('images/mouse.png'); 
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
   }
   
-  /* Universal responsive base */
+  
 img {
     max-width: 100%;
     height: auto;
@@ -472,7 +472,7 @@ img {
     font-family: 'Lexend', sans-serif;
   }
   
-  /* Make layout more flexible */
+  
   .content-wrapper,
   .sidebar,
   .main-grid,
@@ -482,14 +482,14 @@ img {
     box-sizing: border-box;
   }
   
-  /* Responsive grid behavior */
+  
   .main-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
   }
   
-  /* Sidebar and content stack on mobile */
+
   @media (max-width: 768px) {
     .main-grid {
       flex-direction: column;
